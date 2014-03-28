@@ -1,0 +1,13 @@
+# Compilation options
+mk_add_options MOZ_MAKE_FLAGS='-s --no-print-directory'
+
+# Configuration options
+ac_add_options --enable-warnings-as-error
+
+ac_add_options --disable-accessibility
+ac_add_options --disable-crashreporter
+ac_add_options --disable-installer
+ac_add_options --disable-updater
+ac_add_options --enable-tests
+ac_add_options --disable-gstreamer
+ac_add_options --disable-elf-hack
