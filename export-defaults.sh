@@ -1,5 +1,5 @@
 echo "   much export"
-echo "               very dirs"
+echo "               very default"
 echo "         wow"
 
 cp -fp such/defaults/dirs.sh .such-dirs.sh
