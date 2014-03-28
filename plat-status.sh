@@ -1,1 +1,1 @@
-cat ../.such-plat-status.txt
+cat .such-plat-status.txt
