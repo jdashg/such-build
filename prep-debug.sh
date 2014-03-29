@@ -1,3 +1,5 @@
+#!/bin/bash
+
 cp such/mozconfig/debug central/.mozconfig
 
 echo 'Switched to desktop debug build.'

@@ -1,3 +1,5 @@
+#!/bin/bash
+
 . ./.such-dirs.sh
 cd $OBJDIR_RELPATH
 

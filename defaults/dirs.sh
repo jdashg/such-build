@@ -1,3 +1,5 @@
+#!/bin/bash
+
 export OBJDIR_RELPATH=.
 #export OBJDIR_RELPATH=~/ram/objs
 

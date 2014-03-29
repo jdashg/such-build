@@ -1,3 +1,5 @@
+#!/bin/bash
+
 cp such/mozconfig/m-opt central/.mozconfig
 
 echo 'Switched to mobile opt build.'

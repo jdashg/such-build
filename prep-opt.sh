@@ -1,3 +1,5 @@
+#!/bin/bash
+
 cp such/mozconfig/opt central/.mozconfig
 
 echo 'Switched to desktop opt build.'

@@ -1,3 +1,5 @@
+#!/bin/bash
+
 cp such/mixin/local-lin .such-mixin-local
 
 echo 'Switched to Linux platform.'

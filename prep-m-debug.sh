@@ -1,3 +1,5 @@
+#!/bin/bash
+
 cp such/mozconfig/m-debug central/.mozconfig
 
 echo 'Switched to mobile debug build.'
