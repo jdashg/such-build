@@ -1,4 +1,4 @@
-such-build
+such build
 ==========
 
 This is a centralized set of scripts for configuring, building, and
