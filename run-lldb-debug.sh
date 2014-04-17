@@ -7,4 +7,4 @@ cd obj-dbg
 mkdir /tmp/foo 2>/dev/null
 
 export MOZ_QUIET=1
-lldb -- ./dist/bin/firefox -profile /tmp/foo -no-remote
+lldb -- ./dist/NightlyDebug.app/Contents/MacOS/firefox -profile /tmp/foo -no-remote
