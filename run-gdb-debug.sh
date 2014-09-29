@@ -1,4 +1,6 @@
 #!/bin/bash
+suchdir=`dirname $0`
+cd $suchdir/..
 
 . ./.such-dirs.sh
 cd $OBJDIR_RELPATH
