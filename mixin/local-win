@@ -1,1 +1,6 @@
-# Nothing
+ac_add_options --enable-require-all-d3dc-versions
+
+# Should improve build times:
+mk_add_options "export COMPILE_PDB_FLAG="
+mk_add_options "export HOST_PDB_FLAG="
+mk_add_options "export MOZ_DEBUG_FLAGS=-Z7"
