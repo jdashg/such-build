@@ -1,4 +1,6 @@
 #!/bin/bash
+suchdir=`dirname $0`
+cd $suchdir/..
 
 cp such/mozconfig/mv6-debug central/.mozconfig
 
