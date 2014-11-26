@@ -11,3 +11,6 @@ ac_add_options --target=arm-linux-androideabi
 #ac_add_options --with-android-toolchain="$HOME/bin/android-ndk-r8e/toolchains/arm-linux-androideabi-4.7/prebuilt/linux-x86_64"
 #ac_add_options --with-android-version=9
 #ac_add_options --with-system-zlib
+
+export CC=
+export CXX=
