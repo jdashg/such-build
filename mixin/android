@@ -1,7 +1,7 @@
 # Extracts from: mobile/android/config/mozconfigs/android/debug
 
 ac_add_options --with-android-ndk="$HOME/bin/android-ndk-r8e"
-ac_add_options --with-android-sdk="$HOME/bin/android-sdk-linux/platforms/android-19"
+ac_add_options --with-android-sdk="$HOME/bin/android-sdk-linux/platforms/android-21"
 
 ac_add_options --enable-application=mobile/android
 ac_add_options --target=arm-linux-androideabi
