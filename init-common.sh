@@ -11,6 +11,7 @@ then
   echo "Source and Such dirs must share a parent dir."
   exit 1
 fi
+rm $such_src_dir/../.such-probe
 
 echo "   much config"
 echo "               very default"
