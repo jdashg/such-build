@@ -1,9 +1,7 @@
-#!/bin/bash
-suchdir=`dirname $0`
-cd $suchdir/..
+#! /bin/bash
+. `dirname $0`/../.such-dirs.sh
 
-. ./.such-dirs.sh
-cd $OBJDIR_RELPATH
+cd $such_obj_dir
 
 cd obj-dbg
 mkdir foo 2>/dev/null

@@ -1,8 +1,7 @@
-#!/bin/bash
-suchdir=`dirname $0`
-cd $suchdir/..
+#! /bin/bash
+. `dirname $0`/../.such-dirs.sh
 
-cp such/mozconfig/m-opt gecko-dev/.mozconfig
+cp $such_dir/mozconfig/m-opt $such_src_dir/.mozconfig
 
 echo 'Switched to mobile opt build.'
-echo 'Currently on mobile opt build.' > .such-prep-status.txt
+echo 'Currently on mobile opt build.' > $such_dir/../.such-prep-status.txt

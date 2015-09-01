@@ -1,8 +1,7 @@
 # Includes
 . "$topsrcdir/../.such-dirs.sh"
-. "$topsrcdir/../such/mixin/common"
-. "$topsrcdir/../such/mixin/debug"
-. "$topsrcdir/../.such-mixin-local"
+. "$such_dir/mixin/common"
+. "$such_dir/mixin/debug"
+. "$such_dir/../.such-mixin-local"
 
-# Must go after local-dirs.sh, which gives us $OBJDIR_BUILD_ABSPATH.
-mk_add_options MOZ_OBJDIR=$OBJDIR_BUILD_ABSPATH/obj-dbg
+mk_add_options MOZ_OBJDIR=$such_obj_dir_abs/obj-dbg

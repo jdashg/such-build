@@ -1,5 +1,4 @@
-#!/bin/bash
-suchdir=`dirname $0`
-cd $suchdir/..
+#! /bin/bash
+. `dirname $0`/../.such-dirs.sh
 
-cat .such-prep-status.txt
+cat $such_dir/../.such-prep-status.txt
