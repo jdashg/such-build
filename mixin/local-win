@@ -11,12 +11,13 @@ mk_add_options "export MOZ_DEBUG_FLAGS=-Z7"
 #mk_add_options "export CC_WRAPPER="
 #mk_add_options "export CXX_WRAPPER="
 
+# Don't omit frame pointers.
 export CFLAGS="-Oy-"
 export CXXFLAGS="-Oy-"
 
 ac_add_options --enable-debug-symbols
 
-ac_add_options --enable-static-analysis
+#ac_add_options --enable-static-analysis
 
 ac_add_options --target=x86_64-pc-mingw32
 ac_add_options --host=x86_64-pc-mingw32
