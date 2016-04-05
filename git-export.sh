@@ -2,15 +2,16 @@ mkdir ../bridge 2> /dev/null
 rm ../bridge/* 2> /dev/null
 
 ##########
-
-mergebase=$1
+mergebaseArg=$1
+mergebase=$mergebaseArg
 if [ -z "$mergebase" ]
 then
+  mergebaseArg='ups/master'
   mergebase=`../such/mast.sh`
 fi
 
 branch=`git rev-parse --abbrev-ref HEAD`
-echo "$mergebase..$branch" > ../bridge/info
+echo "$mergebaseArg..$branch" > ../bridge/info
 
 echo '../bridge/info:'
 cat ../bridge/info
