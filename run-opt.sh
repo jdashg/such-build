@@ -1,11 +1,15 @@
 #! /bin/bash
 . `dirname $0`/../.such-dirs.sh
 
-cd $such_obj_dir
+src_dir_name=`basename $PWD`
+obj_dir_name=$src_dir_name'-obj-opt'
 
-cd obj-opt
+cd $such_obj_dir
+cd $obj_dir_name
 mkdir foo 2>/dev/null
 
 export JS_DISABLE_SLOW_SCRIPT_SIGNALS=1
 export MOZ_QUIET=1
+export MOZ_SEPARATE_CHILD_PROCESS=1
+export MOZ_GL_SPEW=1
 ./dist/bin/firefox -profile foo -no-remote 2>&1 |cat
