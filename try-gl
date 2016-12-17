@@ -1,0 +1,1 @@
+./mach try -b do -p all -u 'mochitest-gl[Ubuntu,10.10,Windows XP,Windows 7,Windows 8,Windows 10,Android 4.3]' -t none
