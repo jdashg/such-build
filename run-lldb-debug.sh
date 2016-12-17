@@ -1,10 +1,12 @@
 #! /bin/bash
 . `dirname $0`/../.such-dirs.sh
 
-cd $such_obj_dir
+src_dir_name=`basename $PWD`
+obj_dir_name=$src_dir_name'-obj'
 
-cd obj-dbg
-mkdir /tmp/foo 2>/dev/null
+cd $such_obj_dir
+cd $obj_dir_name
+mkdir foo 2>/dev/null
 
 export MOZ_QUIET=1
 lldb -- ./dist/NightlyDebug.app/Contents/MacOS/firefox -profile /tmp/foo -no-remote

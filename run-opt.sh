@@ -2,7 +2,7 @@
 . `dirname $0`/../.such-dirs.sh
 
 src_dir_name=`basename $PWD`
-obj_dir_name=$src_dir_name'-obj-opt'
+obj_dir_name=$src_dir_name'-obj'
 
 cd $such_obj_dir
 cd $obj_dir_name
@@ -12,4 +12,6 @@ export JS_DISABLE_SLOW_SCRIPT_SIGNALS=1
 export MOZ_QUIET=1
 export MOZ_SEPARATE_CHILD_PROCESS=1
 export MOZ_GL_SPEW=1
-./dist/bin/firefox -profile foo -no-remote 2>&1 |cat
+./dist/bin/firefox -profile foo -no-remote 2>&1
+
+./dist/Nightly*/Contents/MacOS/firefox -profile foo -no-remote 2>&1
