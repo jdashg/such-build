@@ -1,6 +1,8 @@
 # Compilation options
 mk_add_options MOZ_MAKE_FLAGS='-s --no-print-directory'
 
+ac_add_options --disable-debug --disable-optimize
+
 # Configuration options
 ac_add_options --enable-warnings-as-errors
 ac_add_options --enable-debug-symbols
