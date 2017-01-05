@@ -2,7 +2,7 @@
 . `dirname $0`/../.such-dirs.sh
 
 src_dir_name=`basename $PWD`
-obj_dir_name=$src_dir_name'-obj'
+obj_dir_name=$src_dir_name'-obj-opt'
 
 cd $such_obj_dir
 cd $obj_dir_name
