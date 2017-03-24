@@ -1,7 +1,0 @@
-#! /bin/bash
-
-such_obj_dir=`dirname $0`/..
-#such_obj_dir=~/ram/objs
-
-such_obj_dir_abs=@TOPSRCDIR@/..
-#such_obj_dir_abs=/home/jgilbert/ram/objs

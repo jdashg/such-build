@@ -1,31 +1,24 @@
 #!/bin/bash
-such_src_dir=$PWD
-such_dir=$such_src_dir/`dirname $0`
+src_dir="$PWD"
+such_dir="$src_dir"/`dirname $0`
+obj_dir="$src_dir"/../objs/`basename "$src_dir"`
 
-rm ../.such-probe 2>/dev/null
-rm $such_dir/../.such-probe 2>/dev/null
-
-touch ../.such-probe
-if [ ! -e $such_dir/../.such-probe ]
+if [ ! -e "$src_dir"/CLOBBER ]
 then
-  rm ../.such-probe
-  echo "Source and Such dirs must share a parent dir."
+  echo 'Run only from the srcroot.'
   exit 1
 fi
-rm ../.such-probe
 
-echo "   much config"
-echo "               very default"
-echo "         wow"
+echo '   much config'
+echo '               very default'
+echo '         wow'
 
-cp -fp $such_dir/defaults/.such-dirs.sh ../.such-dirs.sh
+echo '#! /bin/bash'                >  "$src_dir"/../.such-dirs.sh
+echo '# From such/init-common.sh:' >> "$src_dir"/../.such-dirs.sh
+echo 'such_dir='"$such_dir"        >> "$src_dir"/../.such-dirs.sh
+echo 'obj_dir='"$obj_dir"          >> "$src_dir"/../.such-dirs.sh
 
-echo "" >> ../.such-dirs.sh
-echo "# Vars below are from init-with-cwd.sh." >> ../.such-dirs.sh
-echo "such_dir=$such_dir" >> ../.such-dirs.sh
-echo "such_src_dir=$such_src_dir" >> ../.such-dirs.sh
-
-echo "../such/mast.sh" > ../mast
-echo "../such/git-export.sh" > ../git-export
-echo "../such/hg-import.sh" > ../hg-import
-echo "../such/hg-unimport.sh" > ../hg-unimport
+cat "$such_dir"/defaults/.mozconfig         >  "$src_dir"/.mozconfig
+echo ''                                     >> "$src_dir"/.mozconfig
+echo '# From such/init-common.sh:'          >> "$src_dir"/.mozconfig
+echo 'mk_add_options MOZ_OBJDIR='"$obj_dir" >> "$src_dir"/.mozconfig

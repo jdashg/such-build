@@ -1,8 +1,0 @@
-# Includes
-. "$topsrcdir/../.such-dirs.sh"
-. "$such_dir/mixin/common"
-. "$such_dir/mixin/debug"
-#. "$such_dir/mixin/opt"
-. "$such_dir/../.such-mixin-local"
-
-mk_add_options MOZ_OBJDIR=$such_obj_dir_abs/obj

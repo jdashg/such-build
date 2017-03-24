@@ -4,4 +4,4 @@ export CXX=clang++
 #export CC="python2 /home/jgilbert/dev/mozilla/timec.py /home/jgilbert/dev/mozilla/timec-pp.log clang"
 #export CXX="python2 /home/jgilbert/dev/mozilla/timec.py /home/jgilbert/dev/mozilla/timec-pp.log clang++"
 
-ac_add_options --with-ccache
+#ac_add_options --with-ccache
