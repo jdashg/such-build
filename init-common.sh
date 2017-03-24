@@ -1,7 +1,5 @@
 #!/bin/bash
 src_dir="$PWD"
-such_dir="$src_dir"/`dirname $0`
-obj_dir="$src_dir"/../objs/`basename "$src_dir"`
 
 if [ ! -e "$src_dir"/CLOBBER ]
 then
@@ -13,10 +11,15 @@ echo '   much config'
 echo '               very default'
 echo '         wow'
 
+such_dir="$src_dir"/`dirname $0`
+objs_dir="$src_dir"/../objs
+
 echo '#! /bin/bash'                >  "$src_dir"/../.such-dirs.sh
 echo '# From such/init-common.sh:' >> "$src_dir"/../.such-dirs.sh
 echo 'such_dir='"$such_dir"        >> "$src_dir"/../.such-dirs.sh
-echo 'obj_dir='"$obj_dir"          >> "$src_dir"/../.such-dirs.sh
+echo 'objs_dir='"$objs_dir"        >> "$src_dir"/../.such-dirs.sh
+
+obj_dir="$objs_dir"/`basename "$src_dir"`
 
 cat "$such_dir"/defaults/.mozconfig         >  "$src_dir"/.mozconfig
 echo ''                                     >> "$src_dir"/.mozconfig
