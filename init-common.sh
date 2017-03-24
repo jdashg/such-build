@@ -12,7 +12,9 @@ echo '               very default'
 echo '         wow'
 
 such_dir="$src_dir"/`dirname $0`
-objs_dir="$src_dir"/../objs
+such_dir=`realpath "$such_dir"`
+
+objs_dir=`realpath "$src_dir"/../objs`
 
 echo '#! /bin/bash'                >  "$src_dir"/../.such-dirs.sh
 echo '# From such/init-common.sh:' >> "$src_dir"/../.such-dirs.sh
