@@ -2,15 +2,14 @@
 ac_add_options --target=x86_64-pc-mingw32
 ac_add_options --host=x86_64-pc-mingw32
 
-# Don't omit frame pointers.
-export CFLAGS="-Oy-"
-export CXXFLAGS="-Oy-"
+export CC="clang-cl.exe"
+export CXX="clang-cl.exe"
+export LINKER="lld-link.exe"
 
 # Should improve build times:
 mk_add_options "export COMPILE_PDB_FLAG="
 mk_add_options "export HOST_PDB_FLAG="
 mk_add_options "export MOZ_DEBUG_FLAGS=-Z7"
-
 
 # From :glandium
 #ac_add_options "--with-compiler-wrapper=python $topsrcdir/../ocache.py --dir e:/.ocache --"
