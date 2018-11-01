@@ -2,6 +2,7 @@
 mk_add_options MOZ_MAKE_FLAGS='-s --no-print-directory'
 
 ac_add_options --disable-debug --disable-optimize
+ac_add_options --enable-profiling
 
 # Configuration options
 ac_add_options --enable-warnings-as-errors

@@ -1,6 +1,6 @@
 # Includes
 . "$topsrcdir/../.such-dirs.sh"
 . "$such_dir/mixin/common"
-. "$such_dir/mixin/debug"
-#. "$such_dir/mixin/opt"
+ac_add_options --enable-debug
+#ac_add_options --enable-optimize
 . "$such_dir/../.such-mixin-local"
