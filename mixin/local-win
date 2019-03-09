@@ -1,6 +1,8 @@
 # Specify 64-bit build.
-ac_add_options --target=x86_64-pc-mingw32
 ac_add_options --host=x86_64-pc-mingw32
+
+#ac_add_options --target=i686-pc-mingw32
+ac_add_options --target=x86_64-pc-mingw32
 
 export CC="clang-cl.exe"
 export CXX="clang-cl.exe"
@@ -11,11 +13,8 @@ mk_add_options "export COMPILE_PDB_FLAG="
 mk_add_options "export HOST_PDB_FLAG="
 mk_add_options "export MOZ_DEBUG_FLAGS=-Z7"
 
-# From :glandium
-#ac_add_options "--with-compiler-wrapper=python $topsrcdir/../ocache.py --dir e:/.ocache --"
-# :glandium says we need these too:
-#mk_add_options "export CC_WRAPPER="
-#mk_add_options "export CXX_WRAPPER="
+#ac_add_options "--with-compiler-wrapper=py $topsrcdir/../../pydra/pydra ccerb"
+#export RUSTC_WRAPPER=sccache
 
 # Misc
 ac_add_options --disable-warnings-as-errors
