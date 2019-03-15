@@ -1,2 +1,2 @@
 #ac_add_options "--with-compiler-wrapper=py $topsrcdir/../../pydra/pydra ccerb"
-#export RUSTC_WRAPPER=sccache
+#mk_add_options "export RUSTC_WRAPPER=sccache"
