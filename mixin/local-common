@@ -1,2 +1,4 @@
+#ac_add_options "--with-compiler-wrapper=py $topsrcdir/../such/log_args_shim.py"
 #ac_add_options "--with-compiler-wrapper=py $topsrcdir/../../pydra/pydra ccerb"
 #mk_add_options "export RUSTC_WRAPPER=sccache"
+

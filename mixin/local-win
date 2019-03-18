@@ -13,9 +13,6 @@ mk_add_options "export COMPILE_PDB_FLAG="
 mk_add_options "export HOST_PDB_FLAG="
 mk_add_options "export MOZ_DEBUG_FLAGS=-Z7"
 
-#ac_add_options "--with-compiler-wrapper=py $topsrcdir/../../pydra/pydra ccerb"
-#mk_add_options "export RUSTC_WRAPPER=sccache"
-
 # Misc
 ac_add_options --disable-warnings-as-errors
 #ac_add_options --enable-require-all-d3dc-versions

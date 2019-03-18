@@ -1,7 +1,4 @@
 export CC=clang
 export CXX=clang++
 
-#ac_add_options "--with-compiler-wrapper=py $topsrcdir/../../pydra/pydra ccerb"
-#mk_add_options "export RUSTC_WRAPPER=sccache"
-
 ac_add_options --disable-warnings-as-errors
