@@ -1,1 +1,2 @@
-
+# Optionally adjust this path to match your SDK:
+# ac_add_options --with-macos-sdk=/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.8.sdk
